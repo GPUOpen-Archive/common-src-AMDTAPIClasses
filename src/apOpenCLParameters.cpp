@@ -4913,7 +4913,7 @@ bool apCLBufferRegionParameter::compareToOther(const apParameter& other)const
         apCLBufferRegionParameter* pParam  = (apCLBufferRegionParameter*)(&other);
         GT_IF_WITH_ASSERT(pParam != NULL)
         {
-            retVal = ((_value.origin == pParam->_value.origin) && (_value.size == _value.size));
+            retVal = ((_value.origin == pParam->_value.origin) && (_value.size == pParam->_value.size));
         }
     }
 
@@ -5131,11 +5131,11 @@ bool apCLImageDescriptionParameter::compareToOther(const apParameter& other)cons
         apCLImageDescriptionParameter* pParam  = (apCLImageDescriptionParameter*)(&other);
         GT_IF_WITH_ASSERT(pParam != NULL)
         {
-            retVal = ((_value.image_type == pParam->_value.image_type) && (_value.image_width == _value.image_width) &&
-                      (_value.image_height == pParam->_value.image_height) && (_value.image_depth == _value.image_depth) &&
-                      (_value.image_array_size == pParam->_value.image_array_size) && (_value.image_row_pitch == _value.image_row_pitch) &&
-                      (_value.image_slice_pitch == pParam->_value.image_slice_pitch) && (_value.num_mip_levels == _value.num_mip_levels) &&
-                      (_value.num_samples == pParam->_value.num_samples) && (_value.buffer == _value.buffer));
+            retVal = ((_value.image_type == pParam->_value.image_type) && (_value.image_width == pParam->_value.image_width) &&
+                      (_value.image_height == pParam->_value.image_height) && (_value.image_depth == pParam->_value.image_depth) &&
+                      (_value.image_array_size == pParam->_value.image_array_size) && (_value.image_row_pitch == pParam->_value.image_row_pitch) &&
+                      (_value.image_slice_pitch == pParam->_value.image_slice_pitch) && (_value.num_mip_levels == pParam->_value.num_mip_levels) &&
+                      (_value.num_samples == pParam->_value.num_samples) && (_value.buffer == pParam->_value.buffer));
         }
     }
 
