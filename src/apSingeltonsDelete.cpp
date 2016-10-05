@@ -9,7 +9,7 @@
 //------------------------------ apSingeltonsDelete.cpp ------------------------------
 
 // Local:
-#include <inc/apSingeltonsDelete.h>
+#include "apSingeltonsDelete.h"
 #include <AMDTAPIClasses/Include/apOpenGLStateVariablesManager.h>
 #include <AMDTAPIClasses/Include/apMonitoredFunctionsManager.h>
 #include <AMDTAPIClasses/Include/Events/apEventsHandler.h>
