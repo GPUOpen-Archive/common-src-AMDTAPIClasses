@@ -541,7 +541,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="inc\apSingeltonsDelete.h">
+    <ClInclude Include="src\apSingeltonsDelete.h">
       <Filter>inc</Filter>
     </ClInclude>
     <ClInclude Include="Include\ap2DPoint.h">

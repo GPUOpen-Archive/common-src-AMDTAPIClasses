@@ -280,7 +280,7 @@
     <ClInclude Include="Include\Events\apProfileProgressEvent.h" />
     <ClInclude Include="Include\Events\apTechnologyMonitorFailureEvent.h" />
     <ClInclude Include="Include\Events\apUserWarningEvent.h" />
-    <ClInclude Include="inc\apSingeltonsDelete.h" />
+    <ClInclude Include="src\apSingeltonsDelete.h" />
     <ClInclude Include="Include\ap2DPoint.h" />
     <ClInclude Include="Include\ap2DRectangle.h" />
     <ClInclude Include="Include\apAIDFunctions.h" />
