@@ -353,7 +353,7 @@
 #define AP_STR_KernelDebuggingFailedReasonNotSupported L"\nThis kernel uses unsupported features."
 #define AP_STR_KernelDebuggingFailedReasonArgsNotSupported L"\nThis kernel uses unsupported argument types."
 #define AP_STR_KernelDebuggingFailedReasonNotSupportedGeneral L"\nKernel might be using atomics, unsupported barrier types, or the printf command."
-#define AP_STR_KernelDebuggingFailedReasonUnsupportedPlatform L"\nKernel debugging is only supported on AMD platforms."
+#define AP_STR_KernelDebuggingFailedReasonUnsupportedPlatform L"\nKernel debugging is only supported on AMD platforms (not including OpenCL on ROCm)."
 #define AP_STR_KernelDebuggingFailedReasonNonGPUDevice L"\nKernel debugging is only supported on GPU devices."
 #define AP_STR_KernelDebuggingFailedReasonKernelNotDebuggable L"\nThe kernel is not debuggable (it was probably built without debugging flags).\nPlease create the program with clCreateProgramWithSource and build it with clBuildProgram."
 #define AP_STR_KernelDebuggingFailedReasonQueueNotIntercepted L"\nThe command queue used for dispatch was not intercepted correctly.\nPlease create the command queue with clCreateCommandQueue or clCreateCommandQueueWithProperties."
