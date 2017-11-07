@@ -204,6 +204,9 @@ public:
     const gtString& deviceName() const { return _deviceName; };
     const gtString& deviceNameForDisplay() const { return _deviceNameForDisplay; };
 
+    // Board name:
+    const gtString& boardName() const { return _boardName; };
+
     // Device OpenCL C Version:
     const gtString& deviceOpenCLCVersion() const { return _openCLCVersion; };
 
@@ -382,6 +385,9 @@ private:
 
     // Device name:
     gtString _deviceNameForDisplay;
+
+    // Board name:
+    gtString _boardName;
 
     // OpenCL C Version:
     gtString _openCLCVersion;

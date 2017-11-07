@@ -556,6 +556,9 @@ bool apCLDevice::initialize(clGetDeviceInfoProc pclGetDeviceInfo, bool fullAttri
     bool rcGetDeviceVendorID = deviceParamInfoAsUInt(pclGetDeviceInfo, CL_DEVICE_VENDOR_ID, _deviceVendorID);
     retVal = retVal && rcGetDeviceVendorID;
 
+    // Get the board name (ignore return result as only AMD devices will report a board name):
+    deviceParamInfoAsString(pclGetDeviceInfo, CL_DEVICE_BOARD_NAME_AMD, _boardName);
+
     // Get the driver version:
     bool rcDriverVersion = deviceParamInfoAsString(pclGetDeviceInfo, CL_DRIVER_VERSION, _driverVersion);
     retVal = retVal && rcDriverVersion;
