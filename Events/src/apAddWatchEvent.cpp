@@ -29,11 +29,10 @@ apAddWatchEvent::apAddWatchEvent()
 /// \brief Name:        apAddWatchEvent
 /// \brief Description: Constructor
 /// \param[in]          watchExpression
-/// \param[in]          isMultiwatch
 /// \return
 /// -----------------------------------------------------------------------------------------------
-apAddWatchEvent::apAddWatchEvent(const gtString& watchExpression, bool isMultiwatch) :
-    m_watchExpression(watchExpression), m_isMultiwatch(isMultiwatch)
+apAddWatchEvent::apAddWatchEvent(const gtString& watchExpression) :
+    m_watchExpression(watchExpression)
 {
 }
 
@@ -61,10 +60,6 @@ bool apAddWatchEvent::writeSelfIntoChannel(osChannel& ipcChannel) const
     // Write the watch expression:
     ipcChannel << m_watchExpression;
 
-    // Write the debug flag:
-    ipcChannel << m_isMultiwatch;
-
-
     return retVal;
 }
 
@@ -82,9 +77,6 @@ bool apAddWatchEvent::readSelfFromChannel(osChannel& ipcChannel)
 
     // Read the watch expression:
     ipcChannel >> m_watchExpression;
-
-    // Read the multi watch flag:
-    ipcChannel >> m_isMultiwatch;
 
     return retVal;
 }
@@ -107,7 +99,7 @@ apEvent::EventType apAddWatchEvent::eventType() const
 /// -----------------------------------------------------------------------------------------------
 apEvent* apAddWatchEvent::clone() const
 {
-    apAddWatchEvent* pEventCopy = new apAddWatchEvent(m_watchExpression, m_isMultiwatch);
+    apAddWatchEvent* pEventCopy = new apAddWatchEvent(m_watchExpression);
     return pEventCopy;
 }
 

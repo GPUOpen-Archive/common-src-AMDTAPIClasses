@@ -54,8 +54,11 @@ public:
     virtual bool readSelfFromChannel(osChannel& ipcChannel);
 
 private:
-#ifdef LINUX
+
+#if __GNUC__ > 6
+#ifdef _LINUX
     #pragma GCC diagnostic ignored "-Wignored-attributes"
+#endif
 #endif
     typedef std::pair<cl_uint, oaCLContextProperty> apCLProperty;
     gtVector<apCLProperty> _properties;

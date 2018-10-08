@@ -18,7 +18,7 @@ class AP_API apAddWatchEvent : public apMDIViewCreateEvent
 public:
 
     apAddWatchEvent();
-    apAddWatchEvent(const gtString& watchExpression, bool isMultiwatch);
+    apAddWatchEvent(const gtString& watchExpression);
 
     // Overrides osTransferableObject:
     virtual osTransferableObjectType type() const;
@@ -32,16 +32,10 @@ public:
     // The watch expression:
     gtString watchExpression() const {return m_watchExpression;};
 
-    // Is multi-watch:
-    bool isMultiwatch() const {return m_isMultiwatch;}
-
 protected:
 
     // The watch expression:
     gtString m_watchExpression;
-
-    // Should the watch be added to a multi-watch view:
-    bool m_isMultiwatch;
 
 };
 
